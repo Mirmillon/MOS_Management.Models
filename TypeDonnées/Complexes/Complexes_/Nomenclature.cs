@@ -1,0 +1,35 @@
+﻿using EHR_Management.Models.ProjectAttribute;
+using MOS_Management.Models.TypeDonnées.Simple;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
+namespace MOS_Management.Models.TypeDonnées.Complexes.Complexes_
+{
+    [Mos]
+    public class Nomenclature
+    {
+
+        [Mos]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string NomenclatureId { get; set; }
+        [Mos]
+        [Required]
+        [MaxLength(150)]
+        public string Nom { get; set; }
+        [Mos]
+        [MaxLength(15)]
+        [Mos]
+        public string Version { get; set; }
+        [MaxLength(150)]
+        public MosUri Uri { get; set; }
+
+        //FK
+        internal string AgenceId { get; set; }
+        internal Agence Agence { get; set; }
+
+        public List<Code> Codes { get; set; }
+    }
+}
