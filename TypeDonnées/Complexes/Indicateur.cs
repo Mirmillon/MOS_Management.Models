@@ -1,4 +1,5 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
+using MOS_Management.Models.TypeDonnées.Complexes.Complexes_;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,6 +16,7 @@ namespace MOS_Management.Models.TypeDonnées.Complexes
         internal string TypeName { get { return "Indicateur"; } }
         [NotMapped]
         internal Object Valeur { get; set; }
+        [MaxLength(30)]
         public  string  TypeValeur {
             get
             {

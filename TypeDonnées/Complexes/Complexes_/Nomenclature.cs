@@ -13,7 +13,7 @@ namespace MOS_Management.Models.TypeDonnées.Complexes.Complexes_
 
         [Mos]
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string NomenclatureId { get; set; }
         [Mos]
         [Required]
@@ -27,9 +27,15 @@ namespace MOS_Management.Models.TypeDonnées.Complexes.Complexes_
         public MosUri Uri { get; set; }
 
         //FK
-        internal string AgenceId { get; set; }
+        public string AgenceId { get; set; }
         internal Agence Agence { get; set; }
 
         public List<Code> Codes { get; set; }
+
+        //CONSTRUCTEUR
+        public Nomenclature()
+        {
+            Uri = new MosUri();
+        }
     }
 }

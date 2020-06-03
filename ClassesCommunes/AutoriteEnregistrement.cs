@@ -14,13 +14,19 @@ namespace MOS_Management.Models.ClassesCommunes
         [Mos]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public string AutoriteEnregistrementId { get; set; } 
+        [Required]
+        public string ValeurAutoriteEnregistrement { get; set; } //C'est un codeId de Code
 
-        public string AutoriteEnregistrementId { get; set; }
-        public Code Autorite  { get; set; }
+        [Mos]
         public Code TypeAutorite { get; set; }
-        public Identifiant IdNatstruct { get; set; }
+        [Mos]
+        public Identifiant IdentifiantNationalStructure { get; set; }
 
         [NotMapped]
-        public  string TypeName { get { return this.GetType().ToString(); } }
+        public string TypeName { get { return this.GetType().ToString(); } }
+
+        //FK
+        public List<MetaDonnee> MetaDonnees { get; set; }
     }
 }

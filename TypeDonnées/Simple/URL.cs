@@ -17,6 +17,7 @@ namespace MOS_Management.Models.TypeDonnées.Simple
     [Fhir]
     public class URL : MosUri
     {
+
         // Common URL protocols are http{s}:, ftp:, mailto: and mllp:, though many others are defined
         public string Url { get; set; }
     }
