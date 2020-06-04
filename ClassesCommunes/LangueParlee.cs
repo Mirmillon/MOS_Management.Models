@@ -1,4 +1,5 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos;
 using MOS_Management.Models.TypeDonnées.Simple;
 using System;
 using System.Collections.Generic;
@@ -27,10 +28,10 @@ namespace MOS_Management.Models.TypeDonnées.Complexes
             
         }
         //FK
-        public int PersonnePhysiqueId { get; set; }
+        public string PersonnePhysiqueId { get; set; }
         public PersonnePhysique PersonnePhysique { get; set; }
-        public string LangueId { get; set; } //CodeId
-        public Code Langue { get; set; }
+      
+        public Langue Langue { get; set; }
 
     }
 }

@@ -1,9 +1,11 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
 using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.TypeDonnées.Complexes.Complexes_;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+//Chaîne de caractères qui, associée à d'autres informations complémentaires, est utilisée 
+//pour identifier et différencier d'une manière unique, une instance d'un objet dans une structure de données, des autres objets de la même structure.
 
 namespace MOS_Management.Models.TypeDonnées.Complexes
 {
@@ -17,15 +19,18 @@ namespace MOS_Management.Models.TypeDonnées.Complexes
         [Required]
         public string Valeur { get; set; }
         [Mos]
-        public Code Code { get; set; } //DataSet
-        [Mos]
-        public MosSystem System { get; set; }
+        public Qualification Qualification { get; set; } //DataSet
         [NotMapped]
         internal string TypeName { get { return "Identifiant"; } }
 
+        public string MosSystemId { get; set; }
+        public MosSystem MosSystem { get; set; }
 
-        public List<MetaDonnee> MetaDonnees { get; set; }
+       // public string MetaDonneeId { get; set; }
+      //  public MetaDonnee MetaDonnee { get; set; }
 
+      ///  public string AutoriteEnregistrementId { get; set; }
+     //   public AutoriteEnregistrement AutoriteEnregistrement { get; set; }
 
 
     }

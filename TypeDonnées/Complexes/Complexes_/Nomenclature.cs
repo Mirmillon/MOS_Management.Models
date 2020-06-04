@@ -1,5 +1,6 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
 using MOS_Management.Models.TypeDonnées.Simple;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -37,5 +38,12 @@ namespace MOS_Management.Models.TypeDonnées.Complexes.Complexes_
         {
             Uri = new MosUri();
         }
+
+        //PAS DANS LE MOS
+        public DateTime? DateInscription { get; set; }
+        //PAS DANS LE MOS
+        public DateTime? DateModification { get; set; }
+        //PAS DANS LE MOS
+        public DateTime? DateSuppression { get; set; }
     }
 }

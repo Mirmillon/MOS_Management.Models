@@ -13,4 +13,8 @@
     <ProjectReference Include="..\FhirManagementModels\FHIR_Management.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CLassesMos\FromMesure\" />
+  </ItemGroup>
+
 </Project>

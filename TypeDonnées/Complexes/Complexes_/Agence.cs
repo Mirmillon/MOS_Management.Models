@@ -20,7 +20,7 @@ namespace MOS_Management.Models.TypeDonnées.Complexes.Complexes_
         [MaxLength(150)]
         public string Label { get; set; }
 
-        List<Nomenclature> Nomenclatures { get; set; }
-        List<Complexes_.MosSystem> Systems { get; set; }
+        public List<Nomenclature> Nomenclatures { get; set; }
+        public List<MosSystem> Systems { get; set; }
     }
 }

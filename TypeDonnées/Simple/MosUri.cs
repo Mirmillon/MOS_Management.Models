@@ -1,4 +1,5 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
+using MOS_Management.Models.TypeDonnées.Complexes.Complexes_;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,5 +23,11 @@ namespace MOS_Management.Models.TypeDonnées.Simple
         [Display(Name = "Uri")]
         [MaxLength(250)]
         public string Label { get; set; }
+
+        public string NomenclatureId { get; set; }
+        public Nomenclature Nomenclature { get; set; }
+
+        public string MosSystemId { get; set; }
+        public MosSystem MosSystem { get; set; }
     }
 }
