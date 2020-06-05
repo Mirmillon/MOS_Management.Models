@@ -2,6 +2,7 @@
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -58,9 +59,16 @@ namespace MOS_Management.Models.Autorisation
 
         public MetaDonnee MetaDonnee { get; set; }
 
+        //RELATION AUTRE DOSSIER
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
+
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
-       
-      
+
+
+
     }
 }

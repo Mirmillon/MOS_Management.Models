@@ -1,9 +1,14 @@
 ﻿
 
 
+using MOS_Management.Models.AccordDossier;
+using MOS_Management.Models.AuthentificationDossier;
+using MOS_Management.Models.Autorisation;
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.OrganisationDossier;
+using MOS_Management.Models.ProfessionnelDossier;
 using MOS_Management.Models.TypeDonnées.Complexes;
 using System;
 using System.Collections.Generic;
@@ -454,6 +459,25 @@ namespace MOS_Management.Models.StructureDossier
         public string EntiteJuridiqueId { get; set; }
         public EntiteJuridique EntiteJuridique { get; set; }
         //FIN RELATION
+
+        //RELATION AUTRE DOSSIER
+        public List <SituationEnExercice> SituationEnExercices { get; set; }
+
+        public List<OrganisationInterne> OrganisationInternes { get; set; }
+
+        public List<Certificat> Certificats { get; set; }
+
+        public List<Convention> Conventions { get; set; }
+
+        public LicenceExploitation LicenceExploitation { get; set; }
+
+        public List<EquipementMaterielLourdAutorise> EquipementMaterielLourdAutorise { get; set; }
+
+        public List<DisciplineSocialeAutorisee> DisciplineSocialeAutorisees { get; set; }
+
+        public List<ImplementationActiviteSanitaireAutorisee> ImplementationActiviteSanitaireAutorisee { get; set; }
+
+
 
 
 

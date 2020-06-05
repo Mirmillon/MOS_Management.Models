@@ -1,6 +1,7 @@
 ﻿
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -43,6 +44,10 @@ namespace MOS_Management.Models.AccordDossier
         public DateTime? FinConvention { get; set; }
 
         public MetaDonnee MetaDonnee { get; set; }
+
+        //RELATION AUTRE DOSSIER
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
     }

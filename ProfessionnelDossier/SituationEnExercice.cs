@@ -1,5 +1,6 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -155,6 +156,9 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
         //FIN RELATION
 
+        //RELATION AUTRE DOSSIER
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
 

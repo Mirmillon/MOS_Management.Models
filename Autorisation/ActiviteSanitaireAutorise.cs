@@ -2,6 +2,7 @@
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -81,7 +82,11 @@ namespace MOS_Management.Models.Autorisation
         public List<ImplementationActiviteSanitaireAutorisee> ImplementationActiviteSanitaireAutorisees { get; set; }
         //FIN
 
-       
+        //RELATION AUTRE DOSSIER
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
+
+
 
     }
 }

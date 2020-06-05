@@ -1,6 +1,7 @@
 ﻿
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.ProfessionnelDossier;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -60,6 +61,10 @@ namespace MOS_Management.Models.AccordDossier
         public Profession Profession  { get; set; }
 
         public MetaDonnee MetaDonnee { get; set;  }
+
+        //RELATION AVEC LES AUTRES DOSSIERS
+        public string ProfessionnelId { get; set; }
+        public Professionnel Professionnel { get; set; }
 
     }
 }

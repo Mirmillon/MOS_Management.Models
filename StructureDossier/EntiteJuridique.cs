@@ -1,7 +1,10 @@
 ﻿
+using MOS_Management.Models.AuthentificationDossier;
+using MOS_Management.Models.Autorisation;
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.OrganisationDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -238,7 +241,16 @@ namespace MOS_Management.Models.StructureDossier
         public List<EntiteGeographique> EntiteGeographiques { get; set; }
         //FIN RELATION
 
-        //RELATION SCHEMA
+        //RELATION AUTRE DOSSIER
+        public List<Pole> Poles { get; set; }
+
+        public List<Certificat> Certificats { get; set; }
+
+        public List<EquipementMaterielLourdAutorise> EquipementMaterielLourdAutorise { get; set; }
+
+        public List<DisciplineSocialeAutorisee> DisciplineSocialeAutorisees { get; set; }
+
+        public List<ActiviteSanitaireAutorisee> ActiviteSanitaireAutorisee { get; set; }
 
 
 

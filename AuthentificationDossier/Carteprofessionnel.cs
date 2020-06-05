@@ -1,6 +1,7 @@
 ﻿
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.ProfessionnelDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -68,6 +69,10 @@ namespace MOS_Management.Models.AuthentificationDossier
         //RELATION DANS DOSSIER
         public List<Certificat>  Certificats{ get; set; }
         //FIN RELATION
+
+        //RELATION AUTRE DOSSIER
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
 
 
     }

@@ -1,5 +1,6 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.OrganisationDossier;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -62,6 +63,10 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public string ExerciceProfessionnelId { get; set; }
         public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
         //FIN RELATION
+
+        //RELATION AUTRE DOSSIER
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
 
 
 

@@ -1,5 +1,7 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.ProfessionnelDossier;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -122,6 +124,16 @@ namespace MOS_Management.Models.AuthentificationDossier
         public string CarteProfessionnelId { get; set; }
         public CarteProfessionnel CarteProfessionnel { get; set; }
         //FIN RELATION
+
+        //RELATION AUTRE DOSSIER
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
+
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
 

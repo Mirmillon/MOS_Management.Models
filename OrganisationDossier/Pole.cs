@@ -14,10 +14,14 @@ Les pôles peuvent être multi-sites.
 
 
 
+using MOS_Management.Models.StructureDossier;
+
 namespace MOS_Management.Models.OrganisationDossier
 {
     public class Pole: OrganisationInterne
     {
-
+        //RELATION AUTRE DOSSIER
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
     }
 }

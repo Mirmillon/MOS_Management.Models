@@ -1,5 +1,6 @@
 ﻿
 
+using MOS_Management.Models.AuthentificationDossier;
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using System;
@@ -123,6 +124,10 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public List<NiveauFormation> NiveauFormations { get; set; }
         public List<AttributionParticuliére> AttributionParticuliéres { get; set; }
         //FIN RELATION
+
+        //RELATION AUTRE DOSSIER
+        public List<CarteProfessionnel> CarteProfessionnelles { get; set; }
+        public List<Certificat> Certificats { get; set; }
 
 
 

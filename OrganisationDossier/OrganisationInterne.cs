@@ -4,6 +4,8 @@
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.ProfessionnelDossier;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -212,9 +214,13 @@ namespace MOS_Management.Models.OrganisationDossier
         public List<EquipementOperationnelle> EquipementOperationnelles { get; set; }
 
         public List<Organisation_Activite> Organisation_Activites { get; set; }
-
-       
         //FIN
+
+        //RELATION AUTRE DOSSIER
+        public List<SituationOperationnelle> SituationOperationnelles { get; set; }
+
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
 

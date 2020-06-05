@@ -1,4 +1,5 @@
-﻿using MOS_Management.Models.ClassesCommunes;
+﻿using MOS_Management.Models.AccordDossier;
+using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
 using MOS_Management.Models.PersonnePriseChargeDossier;
@@ -28,5 +29,8 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public List<ExerciceProfessionnel> ExerciceProfessionnels { get; set; }
 
         public List<PersonnePriseEnCharge_Professionnel> Soignant_Soigne { get; set; }
+
+        //RELATION AVEC LES AUTRES DOSSIERS
+        public List<AutorisationExercice> AutorisationExercices { get; set; }
     }
 }
