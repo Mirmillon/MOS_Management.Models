@@ -1,5 +1,6 @@
 ﻿using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromTexte;
+using MOS_Management.Models.ProfessionnelDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -296,5 +297,18 @@ namespace MOS_Management.Models.ClassesCommunes
         public string Ligne7 { get; set; }
 
         public MetaDonnee MetaDonnee { get; set; }
+
+        //
+        public string ContactId { get; set; }
+        public Contact Contact { get; set; }
+
+        public string LieuId { get; set; }
+        public Lieu Lieu { get; set; }
+
+        public string ProfessionnelId { get; set; }
+        public Professionnel Professionnel { get; set; }
+
+        public string PersonnePriseChargeId { get; set; }
+        public PersonnePriseCharge PersonnePriseCharge { get; set; }
     }
 }

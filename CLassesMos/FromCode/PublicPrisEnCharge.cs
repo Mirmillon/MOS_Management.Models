@@ -6,11 +6,8 @@ using System.Text;
 
 namespace MOS_Management.Models.CLassesMos.FromCode
 {
-    public class CategorieAge :Code
+    public class PublicPrisEnCharge : Code
     {
-        public string PersonnePhysiqueId { get; set; }
-        public PersonnePhysique PersonnePhysique { get; set; }
-
         public string PatienteleId { get; set; }
         public Patientele Patientele { get; set; }
     }

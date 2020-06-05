@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MOS_Management.Models.CLassesMos.FromCode;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -18,7 +19,7 @@ namespace MOS_Management.Models.ClassesCommunes
         */
         [MaxLength(3)]
         [Display(Name = "Type Evenement")]
-        public string TypeEvenementId { get; set; }
+        public TypeEvenement TypeEvenement { get; set; }
 
         /*
         Date/heure à laquelle l'évènement est arrivé.
@@ -34,5 +35,7 @@ namespace MOS_Management.Models.ClassesCommunes
         [Display(Name = "Description")]
         [MaxLength(200)]
         public string  Description { get; set; }
+
+        public MetaDonnee MetaDonnee { get; set; }
     }
 }

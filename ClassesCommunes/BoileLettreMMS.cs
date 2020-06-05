@@ -1,6 +1,7 @@
 ﻿using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromTelecommunication;
 using MOS_Management.Models.CLassesMos.FromTexte;
+using MOS_Management.Models.ProfessionnelDossier;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -82,6 +83,10 @@ namespace MOS_Management.Models.ClassesCommunes
         }
 
         public MetaDonnee MetaDonnee { get; set; }
+
+        //
+        public string ProfessionnelId { get; set; }
+        public Professionnel Professionnel { get; set; }
 
 
     }

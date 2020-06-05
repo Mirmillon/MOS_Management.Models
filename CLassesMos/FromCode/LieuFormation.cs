@@ -6,12 +6,9 @@ using System.Text;
 
 namespace MOS_Management.Models.CLassesMos.FromCode
 {
-    public class COGCommune :Code
+    public class LieuFormation : Code
     {
-        public string AdresseId { get; set; }
-        public Adresse Adresse { get; set; }
-
-        public string LieuId { get; set; }
-        public Lieu Lieu { get; set; }
+        public string DiplomeId { get; set; }
+        public Diplome Diplome { get; set; }
     }
 }

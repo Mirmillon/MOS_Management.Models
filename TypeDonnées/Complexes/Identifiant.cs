@@ -26,11 +26,8 @@ namespace MOS_Management.Models.TypeDonnées.Complexes
         public string MosSystemId { get; set; }
         public MosSystem MosSystem { get; set; }
 
-       // public string MetaDonneeId { get; set; }
-      //  public MetaDonnee MetaDonnee { get; set; }
-
-      ///  public string AutoriteEnregistrementId { get; set; }
-     //   public AutoriteEnregistrement AutoriteEnregistrement { get; set; }
+        public string LieuId { get; set; }
+        public Lieu Lieu { get; set; }
 
 
     }

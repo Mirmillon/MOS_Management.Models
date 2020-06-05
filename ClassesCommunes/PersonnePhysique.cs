@@ -99,7 +99,11 @@ namespace MOS_Management.Models.ClassesCommunes
 
         public List<LangueParlee> LangueParlees { get; set; }
         public List<PrenomNaissance> Prenoms { get; set; }
-     
+
+
+        public string ContactId { get; set; }
+        public Contact Contact { get; set; }
+
 
         public PersonnePhysique()
         {

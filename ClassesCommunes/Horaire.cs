@@ -1,4 +1,6 @@
 ﻿
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,13 +12,13 @@ La classe Horaire permet de définir les différentes plages du planning d'une e
 d'ouverture, période de fermeture, etc.).
 */
 
-namespace eSanteRazor.Models.MOS.Geographique
+namespace MOS_Management.Models.ClassesCommunes
 {
     public class Horaire
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string  Id { get; set; }
+        public string HoraireId { get; set; }
         /*
         Un type de plage horaire apporte un contexte à la plage horaire définie par la
         suite. Un planning peut être constitué de plusieurs plages horaires du même type
@@ -25,7 +27,7 @@ namespace eSanteRazor.Models.MOS.Geographique
         TRE_R252-TypeHoraire
         */
         [Display(Name = "Type Horaire")]
-        public int? TypeHoraireId { get; set; }
+        public TypeHoraire TypeHoraire { get; set; }
         /*
         Indicateur d'ouverture ou de fermeture.
         Valeurs possibles :
@@ -49,6 +51,8 @@ namespace eSanteRazor.Models.MOS.Geographique
         [MaxLength(150)]
         public string Commentaires { get; set; }
 
+
+        public MetaDonnee MetaDonnee { get; set; }
 
         public Horaire()
         {

@@ -1,5 +1,6 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.CLassesMos.FromIdentifiant;
 using MOS_Management.Models.TypeDonnées.Complexes;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -19,7 +20,7 @@ namespace MOS_Management.Models.ClassesCommunes
         [Mos]
         public TypeAutorite TypeAutorite { get; set; }
         [Mos]
-        public Identifiant Identifiant { get; set; }
+        public IdentifiantNationalStructure IdentifiantNationalStructure { get; set; }
 
         [NotMapped]
         public string TypeName { get { return this.GetType().ToString(); } set { } }
