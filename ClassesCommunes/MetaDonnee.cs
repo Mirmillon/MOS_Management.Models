@@ -1,6 +1,9 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
 using MOS_Management.Models.AccordDossier;
+using MOS_Management.Models.AuthentificationDossier;
+using MOS_Management.Models.Autorisation;
 using MOS_Management.Models.CLassesMos.FromTexte;
+using MOS_Management.Models.OrganisationDossier;
 using MOS_Management.Models.PersonnePriseChargeDossier;
 using MOS_Management.Models.ProfessionnelDossier;
 using MOS_Management.Models.StructureDossier;
@@ -152,6 +155,36 @@ namespace MOS_Management.Models.ClassesCommunes
 
         public string EntiteGeographiqueId { get; set; }
         public EntiteGeographique EntiteGeographique { get; set; }
+
+        //authentification
+        public string CarteProfessionnelId { get; set; }
+        public CarteProfessionnel CarteProfessionnel { get; set; }
+
+        public string CertificatId { get; set; }
+        public Certificat Certificat { get; set; }
+
+        //autorisation
+        public string ActiviteSanitaireAutoriseeId { get; set; }
+        public ActiviteSanitaireAutorisee ActiviteSanitaireAutorisee { get; set; }
+
+        public string ImplementationActiviteSanitaireAutoriseeId { get; set; }
+        public ImplementationActiviteSanitaireAutorisee ImplementationActiviteSanitaireAutorisee { get; set; }
+
+        public string RessourceMaterielleId { get; set; }
+        public RessourceMaterielle RessourceMaterielle { get; set; }
+
+        public string DisciplineSocialeAutoriseeId { get; set; }
+        public DisciplineSocialeAutorisee DisciplineSocialeAutorisee { get; set; }
+
+        //Organisation
+        public string ActiviteOperationelleId { get; set; }
+        public ActiviteOperationnelle ActiviteOperationelle { get; set; }
+
+        public string EquipementOperationnelleId { get; set; }
+        public EquipementOperationnelle EquipementOperationnelle { get; set; }
+
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
 
 
     }

@@ -1,4 +1,6 @@
 ﻿
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -27,7 +29,7 @@ namespace MOS_Management.Models.AuthentificationDossier
         */
         [MaxLength(3)]
         [Display(Name = "Type Carte")]
-        public string TypeCarteId { get; set; }
+        public TypeCarte TypeCarte { get; set; }
         /*
         Numéro de la carte du professionnel.
         Codage des caractères en binaire codé en ASCII.
@@ -61,8 +63,12 @@ namespace MOS_Management.Models.AuthentificationDossier
         public DateTime? DateOpposition { get; set; }
 
 
-       // public IEnumerable<Certificat> Certificats { get; set; }
+        public MetaDonnee MetaDonnee { get; set;  }
 
-       
+        //RELATION DANS DOSSIER
+        public List<Certificat>  Certificats{ get; set; }
+        //FIN RELATION
+
+
     }
 }

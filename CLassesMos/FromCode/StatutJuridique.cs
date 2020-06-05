@@ -1,4 +1,5 @@
-﻿using MOS_Management.Models.TypeDonnées.Complexes;
+﻿using MOS_Management.Models.StructureDossier;
+using MOS_Management.Models.TypeDonnées.Complexes;
 using System;
 using System.Collections.Generic;
 using System.Text;

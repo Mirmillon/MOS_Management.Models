@@ -1,6 +1,7 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromIdentifiant;
+using MOS_Management.Models.PersonnePriseChargeDossier;
 using System.Collections.Generic;
 
 namespace MOS_Management.Models.ProfessionnelDossier
@@ -25,5 +26,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
 
         //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
         public List<ExerciceProfessionnel> ExerciceProfessionnels { get; set; }
+
+        public List<PersonnePriseEnCharge_Professionnel> Soignant_Soigne { get; set; }
     }
 }

@@ -2,6 +2,8 @@
 
 
 using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.CLassesMos.FromIdentifiant;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,18 +24,11 @@ interne dont dépend l'organisation interne
 
 namespace MOS_Management.Models.OrganisationDossier
 {
-    public class OrganisationInterne
+    public  class OrganisationInterne
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string OrganisationInterneId { get; set; }
-
-        /*
-        Champ créée pour gérer la relation cyclique 
-        */
-        //TODO Faire liste de tout les oi de la meme entite geographique ++++
-        [Display(Name = "Superviseur")]
-        public int OrganisationInterneSupervisanteId { get; set; }
 
         /*
         Identifiant de l'organisation interne, unique et persistant au niveau national.
@@ -41,7 +36,9 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(20)]
         [Display(Name ="Identifiant")]
-        public string  Identifiant { get; set; }
+        public IdentifiantOI IdentifiantOI { get; set; }
+
+        public string NomOrganisationInterne { get; set; }
 
         /*
         Type d'organisation interne (pôle, structure interne ou service, unité
@@ -52,7 +49,7 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(2)]
         [Display(Name = "Type Organisation Interne")]
-        public string TypeOrganisationInterneId { get; set; }
+        public TypeOrganisationInterne TypeOrganisationInterne { get; set; }
 
         /*
         Champ(s) de l’activité des établissements de santé publics et privés
@@ -65,7 +62,7 @@ namespace MOS_Management.Models.OrganisationDossier
         Nomenclature(s) associée(s) :
         TRE_R227-ChampActivite
         */
-       // public IEnumerable<ChampActiviteOI> ChampActiviteOIs { get; set; }
+        public List<ChampActiviteOI> ChampActiviteOIs { get; set; }
 
         /*
         Un mode de prise en charge se définit par une organisation quant à la
@@ -73,7 +70,7 @@ namespace MOS_Management.Models.OrganisationDossier
         Nomenclature(s) associée(s) :
         TRE_R213-ModePriseEnCharge
         */
-      //  public IEnumerable<ModePriseEnChargeOI> ModePriseEnChargeOIs { get; set; }
+        public List<ModePriseEnChargeOI> ModePriseEnChargeOIs { get; set; }
 
         /*
         La catégorie d'organisation caractérise la nature particulière d’une
@@ -84,7 +81,7 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(2)]
         [Display(Name = "Categorie Organisation")]
-        public string CategorieOrganisationId { get; set; }
+        public CategorieOrganisation CategorieOrganisation { get; set; }
 
         /*
         Un acte spécifique est une action menée par un ou plusieurs acteur(s) de
@@ -101,7 +98,7 @@ namespace MOS_Management.Models.OrganisationDossier
         Nomenclature(s) associée(s) :
         TRE_R210-ActeSpecifique
         */
-    //    public IEnumerable<ActeSpecifiqueOI> ActeSpecifiqueOIs { get; set; }
+        public List<ActeSpecifiqueOI> ActeSpecifiqueOIs { get; set; }
 
         /*
         L’ouverture annuelle indique le nombre de jours dans l’année au cours
@@ -112,7 +109,7 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(2)]
         [Display(Name = "Acceuil P.S.H ou P.P.A")]
-        public string OuvertureAnnuelleId { get; set; }
+        public OuvertureAnnuelle OuvertureAnnuelle { get; set; }
 
         /*
         La temporalité d’accueil précise si l’unité offre un accueil permanent ou
@@ -123,7 +120,7 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(2)]
         [Display(Name = "Acceuil")]
-        public string TemporaliteAccueilId { get; set; }
+        public TemporaliteAccueil TemporaliteAccueil { get; set; }
 
         /*
         Une spécialisation de prise en charge est une grande catégorie de
@@ -134,7 +131,7 @@ namespace MOS_Management.Models.OrganisationDossier
         Nomenclature(s) associée(s) :
         TRE_R245-SpecialisationDePriseEnCharge
         */
-      //  public IEnumerable<SpecialisationDePriseEnChargeOI> SpecialisationDePriseEnChargeOIs { get; set; }
+        public List<SpecialisationDePriseEnCharge> SpecialisationDePriseEnCharges { get; set; }
 
         /*
         Indique si l’unité accepte d’accueillir des personnes en situation de
@@ -151,7 +148,9 @@ namespace MOS_Management.Models.OrganisationDossier
         résidants sur ce secteur. Cet attribut est le libellé du secteur de
         psychiatrie. Le secteur de psychiatrie s'exprime sous la forme d'un libellé.
         */
-  //      public IEnumerable<Sectorisation> Sectorisations { get; set; }
+
+        //TODO CLASSE A CREER
+        public IEnumerable<Sectorisation> Sectorisations { get; set; }
 
         /*
         Type d'autorisation d'obstétrique pour l'OI, conforme à l'autorisation
@@ -163,7 +162,7 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(4)]
         [Display(Name = "Niveau maternité")]
-        public string NiveauMaterniteId { get; set; }
+        public NiveauMaternite NiveauMaternite { get; set; }
 
         /*
         Date d'ouverture de l'organisation interne
@@ -182,42 +181,45 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         [MaxLength(3)]
         [Display(Name = "Motif fermeture")]
-        public string TypeFermetureId { get; set; }
+        public TypeFermeture TypeFermeture { get; set; }
 
-       
+        public List<Adresse> Adresses { get; set; }
 
-        //IEnumerable<Patientele> Patienteles { get; set; }
-        //IEnumerable<Zone> Zones { get; set; }
+        public List<TeleCommunication> TeleCommunications { get; set; }
 
-        /*
-        La capacité d'accueil fournit le nombre de lits et/ou places disponibles ou   installés.
-        */
-        public CapaciteAcceuilCrise CapaciteAcceuilCrise { get; set; }
+        public List<Lieu> Lieus { get; set; }
 
-        /*
-        La capacité d'accueil en situation de crise représente le nombre de places
-        supplémentaires, par rapport à la capacité théorique usuelle, que
-        Table 29 Attributs de la classe "OrganisationInterne"
-        l’établissement peut mettre à disposition pour accueillir des patients lors
-        du déclenchement du plan ORSAN, en fonction du délai.
-        */
+        public List<Contact> Contacts { get; set; }
+
+        public List<BoileLettreMMS> BoileLettreMMSs { get; set; }
+
         public CapaciteAcceuil CapaciteAcceuil { get; set; }
 
-        public IEnumerable<Horaire> Horaires { get; set; }
-        public IEnumerable<Contact> Contacts { get; set; }
-        public IEnumerable<TeleCommunication> TeleCommunications { get; set; }
-       // public IEnumerable<SituationOperationnelle> SituationOperationnelles { get; set; }
-       // public IEnumerable<EquipementOperationnelle> EquipementOperationnelles { get; set; }
-      //  public IEnumerable<ActiviteOperationnelle> ActiviteOperationnelles { get; set; }
+        public CapaciteAcceuilCrise CapaciteAcceuilCrise { get; set; }
 
-        public IEnumerable<Adresse> Adresses { get; set; }
-        public IEnumerable<BoileLettreMMS> BoileLettreMMs { get; set; }
         public IEnumerable<CapaciteHabitation> CapaciteHabitations { get; set; }
 
-        //TJ
-       // public IEnumerable<EntiteGeoOrganisation> EntiteGeoOrganisations { get; set; }
-        //TJ
-       // public IEnumerable<OrganisationActivite> OrganisationActivites { get; set; }
+        public IEnumerable<Patientele> Patienteles { get; set; }
+
+        public IEnumerable<Horaire> Horaires { get; set; }
+
+        public IEnumerable<Zone> Zones { get; set; }
+
+        public MetaDonnee MetaDonnee { get; set; }
+
+
+        //RELATION DOSSIER
+        public List<EquipementOperationnelle> EquipementOperationnelles { get; set; }
+
+        public List<Organisation_Activite> Organisation_Activites { get; set; }
+
+       
+        //FIN
+
+
+
+
+
 
     }
 }

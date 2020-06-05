@@ -1,6 +1,7 @@
 ﻿
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.OrganisationDossier;
 using MOS_Management.Models.ProfessionnelDossier;
 using System;
 using System.Collections.Generic;
@@ -63,6 +64,9 @@ namespace MOS_Management.Models.ClassesCommunes
         //
         public string SituationOperationnelleId { get; set; }
         public SituationOperationnelle SituationOperationnelle { get; set; }
+
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
 
 
 

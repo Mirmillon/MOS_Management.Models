@@ -1,0 +1,14 @@
+﻿using MOS_Management.Models.OrganisationDossier;
+using MOS_Management.Models.TypeDonnées.Complexes;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MOS_Management.Models.CLassesMos.FromIdentifiant
+{
+    public class IdentifiantOI : Identifiant
+    {
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
+    }
+}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MOS_Management.Models.ClassesCommunes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,17 +11,10 @@ d'entrée du pays dans l'EEE (Directive européenne 2005-36 modifiée). L'annexe
 directive donne la liste des reconnaissances mutuelles de diplômes de spécialité au sein de l'EEE.
 */
 
-namespace eSanteRazor.Models.MOS.Gens.Professionnelle._NiveauFormation._Diplomes
+namespace MOS_Management.Models.CLassesMos.FromDiplome
 {
     public class DiplomeEES :Diplome
     {
-        [MaxLength(6)]
-        [Display(Name = "Diplome Européen E.S")]
-        public string DESCGroupe1DiplomeId { get; set; }
-
-        public DiplomeEES():base()
-        {
-            TypeDiplomeId = "DEES";
-        }
+        
     }
 }

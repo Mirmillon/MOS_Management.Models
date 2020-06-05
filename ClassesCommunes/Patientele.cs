@@ -1,5 +1,6 @@
 ﻿
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.OrganisationDossier;
 using MOS_Management.Models.TypeDonnées.Complexes;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace MOS_Management.Models.ClassesCommunes
         public MetaDonnee MetaDonnee { get; set; }
 
         //
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
 
     }
 }

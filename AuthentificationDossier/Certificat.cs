@@ -1,4 +1,5 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -76,7 +77,7 @@ namespace MOS_Management.Models.AuthentificationDossier
         */
         [MaxLength(2)]
         [Display(Name = "Mise en oeuvre de la clé")]
-        public string CategorieProduitId { get; set; }
+        public CategorieProduit CategorieProduit { get; set; }
         /*
         Type de carte renseigné obligatoirement pour les certificats embarqués dans les  cartes de professionnel (CPx).
         Exemples :
@@ -89,7 +90,7 @@ namespace MOS_Management.Models.AuthentificationDossier
         */
         [MaxLength(3)]
         [Display(Name = "Type Carte")]
-        public string TypeCarteId { get; set; }
+        public TypeCarte TypeCarte { get; set; }
         /*
         Identification de l'émetteur du token complété du numéro de série de la carte.
         Cet attribut est renseigné obligatoirement pour les certificats embarqués dans les
@@ -107,7 +108,7 @@ namespace MOS_Management.Models.AuthentificationDossier
         //TODO format .crt en hexadécimal, codé en ASCII
         [MaxLength(300)]
         [Display(Name = "Valeur Binaire ")]
-        public string Valeur { get; set; }
+        public ObjetBinaire ValeurBinaire { get; set; }
         /*
         Le statut de publication indique si l’autorisation a été donnée ou pas de publier le certificat dans l’annuaire de publication des certificats.
         */
@@ -115,7 +116,14 @@ namespace MOS_Management.Models.AuthentificationDossier
         [Display(Name = "Publication ")]
         public string StatutPublication { get; set; }
 
+        public MetaDonnee MetaDonnee { get; set; }
 
-       
+        //RELATION DANS DOSSIER
+        public string CarteProfessionnelId { get; set; }
+        public CarteProfessionnel CarteProfessionnel { get; set; }
+        //FIN RELATION
+
+
+
     }
 }

@@ -12,9 +12,9 @@ en charge du malade par les équipes médicales, soignantes ou médico-technique
 Les pôles peuvent être multi-sites.
 */
 
-using MOS_Management.Models.OrganisationDossier;
 
-namespace eSanteRazor.Models.MOS.Organisation
+
+namespace MOS_Management.Models.OrganisationDossier
 {
     public class Pole: OrganisationInterne
     {

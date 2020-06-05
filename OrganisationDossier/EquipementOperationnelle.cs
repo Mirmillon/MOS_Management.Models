@@ -1,5 +1,6 @@
 ﻿
 using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -30,13 +31,19 @@ namespace MOS_Management.Models.OrganisationDossier
         TRE_R212-Equipement
         */
         [Display(Name = "Equipement")]
-        public string EquipementId { get; set; }
+        public TypeEquipement TypeEquipement { get; set; }
         /*
         Nombre d'équipements du même type en état de fonctionnement.
         */
         public short NbEquipement { get; set; }
 
+        public MetaDonnee MetaDonnee { get; set; }
 
-      
+        //RELATION DOSSIER
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
+
+
+
     }
 }

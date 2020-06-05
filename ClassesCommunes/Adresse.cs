@@ -1,5 +1,6 @@
 ﻿using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromTexte;
+using MOS_Management.Models.OrganisationDossier;
 using MOS_Management.Models.PersonnePriseChargeDossier;
 using MOS_Management.Models.ProfessionnelDossier;
 using MOS_Management.Models.StructureDossier;
@@ -322,5 +323,9 @@ namespace MOS_Management.Models.ClassesCommunes
 
         public string EntiteGeographiqueId { get; set; }
         public EntiteGeographique EntiteGeographique { get; set; }
+
+        //ORGANISATION
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
     }
 }

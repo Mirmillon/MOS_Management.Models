@@ -1,4 +1,5 @@
 ﻿
+using MOS_Management.Models.StructureDossier;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 /*

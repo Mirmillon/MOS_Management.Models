@@ -1,5 +1,7 @@
 ﻿
 
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -36,7 +38,7 @@ namespace MOS_Management.Models.OrganisationDossier
         TRE_R211-ActiviteOperationnelle
         ASS_A14-FamilleActivite-ActiviteOperationnelle
         */
-        public string ActiviteId { get; set; }
+        public Activite Activite{ get; set; }
         /*
         Une famille d’activités opérationnelles est un regroupement cohérent
         d’activités délivrées par une organisation interne, répondant à un besoin
@@ -48,7 +50,7 @@ namespace MOS_Management.Models.OrganisationDossier
         TRE_R266-FamilleActiviteOperationnelleHorsSerafin
         ASS_A14-FamilleActivite-ActiviteOperationnelle
         */
-        public string FamilleActiviteId { get; set; }
+        public FamilleActivite FamilleActivite { get; set; }
         /*
         Date de mise en oeuvre de l'activité.
         */
@@ -58,12 +60,12 @@ namespace MOS_Management.Models.OrganisationDossier
         */
         public DateTime? DateFin { get; set; }
 
+        public MetaDonnee MetaDonnee { get; set;  }
 
-        //FOREIGN KEY
-        public int OrganisationInterneId { get; set; }
-        public OrganisationInterne OrganisationInterne { get; set; }
+        //RELATION DOSSIER
+        public List<Organisation_Activite> Organisation_Activites { get; set; }
+        //FIN
 
-        //TJ
-       // public IEnumerable<OrganisationActivite> OrganisationActivites { get; set; }
+
     }
 }

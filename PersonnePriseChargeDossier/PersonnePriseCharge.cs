@@ -17,5 +17,7 @@ namespace MOS_Management.Models.PersonnePriseChargeDossier
         public List<TeleCommunication> TeleCommunications {get; set;}
 
         public MetaDonnee MetaDonnee { get; set; }
+
+        public List<PersonnePriseEnCharge_Professionnel> Soignant_Soigne { get; set; }
     }
 }

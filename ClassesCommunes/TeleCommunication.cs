@@ -1,6 +1,8 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
+using MOS_Management.Models.AuthentificationDossier;
 using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromTexte;
+using MOS_Management.Models.OrganisationDossier;
 using MOS_Management.Models.PersonnePriseChargeDossier;
 using MOS_Management.Models.ProfessionnelDossier;
 using MOS_Management.Models.StructureDossier;
@@ -57,6 +59,14 @@ namespace MOS_Management.Models.ClassesCommunes
 
         public string EntiteGeographiqueId { get; set; }
         public EntiteGeographique EntiteGeographique { get; set; }
+
+        //AUTHENTIFICATION
+        public string CertificatId { get; set; }
+        public Certificat Certificat { get; set; }
+
+        //ORGANISATION
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
 
 
 

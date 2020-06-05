@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MOS_Management.Models.OrganisationDossier;
+using MOS_Management.Models.StructureDossier;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 /*
@@ -74,6 +76,10 @@ namespace MOS_Management.Models.ClassesCommunes
         //
         public string EntiteGeographiqueId { get; set; }
         public EntiteGeographique EntiteGeographique { get; set; }
+
+        //
+        public string OrganisationInterneId { get; set; }
+        public OrganisationInterne OrganisationInterne { get; set; }
 
 
     }
