@@ -1,5 +1,7 @@
 ﻿
 
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,7 +28,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(2)]
         [Display(Name = "Civilite")]
-        public string CiviliteExerciceId { get; set; }
+        public CiviliteExercice CiviliteExercice { get; set; }
 
         /*
         Prénom sous lequel exerce le professionnel.
@@ -56,7 +58,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(4)]
         [Display(Name = "Profession")]
-        public string ProfessionId { get; set; }
+        public Profession Profession { get; set; }
 
         /*
         Indique le type de profession de la personne.
@@ -72,7 +74,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(2)]
         [Display(Name = "Categorie")]
-        public string TypeProfessionId { get; set; }
+        public TypeProfession TypeProfession { get; set; }
 
         /*
         Indique si le professionnel exerce sa profession en tant que :
@@ -86,7 +88,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(3)]
         [Display(Name = "Categorie")]
-        public string CategorieProfessionnelleId { get; set; }
+        public CategorieProfessionnelle CategorieProfessionnelle { get; set; }
 
         /*
         */
@@ -105,7 +107,24 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Departement du premier référencement")]
-        public string DepartementOMId { get; set; }
+        public DepartementOM DepartementOM { get; set; }
+
+        public List<BoileLettreMMS> BoileLettreMMSs { get; set;  }
+
+        public MetaDonnee MetaDonnee { get; set; }
+
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ProfessionnelId { get; set; }
+        public Professionnel Professionnel { get; set; }
+
+        public List<SituationEnExercice> SituationEnExercices { get; set; }
+        public List<SituationOperationnelle> SituationOperationnelles { get; set; }
+        public List<SavoirFaire> SavoirFaires { get; set; }
+        public List<NiveauFormation> NiveauFormations { get; set; }
+        public List<AttributionParticuliére> AttributionParticuliéres { get; set; }
+        //FIN RELATION
+
+
 
     }
 }

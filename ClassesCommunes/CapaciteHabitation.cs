@@ -22,5 +22,9 @@ namespace MOS_Management.Models.ClassesCommunes
 
         public MetaDonnee MetaDonnee { get; set; }
 
+        //
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
+
     }
 }

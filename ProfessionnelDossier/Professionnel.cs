@@ -22,5 +22,8 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public List<BoileLettreMMS> BoileLettreMMSs { get; set;  }
 
         public MetaDonnee MetaDonnee { get; set;  }
+
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public List<ExerciceProfessionnel> ExerciceProfessionnels { get; set; }
     }
 }

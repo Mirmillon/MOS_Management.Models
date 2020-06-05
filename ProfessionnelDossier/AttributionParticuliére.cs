@@ -1,5 +1,7 @@
 ﻿
 
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,7 +24,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
 
         [MaxLength(8)]
         [Display(Name = "Attribution Particuliere")]
-        public string TypeAttributionParticuliéreId { get; set; }
+        public TypeAttributionParticuliére TypeAttributionParticuliére { get; set; }
 
         //Date à partir de laquelle l'attribution particulière prend effet.
         [DataType(DataType.Date)]
@@ -34,7 +36,14 @@ namespace MOS_Management.Models.ProfessionnelDossier
         [Display(Name = "FiN Attribution")]
         public DateTime? DateFin { get; set; }
 
-      
+        public MetaDonnee MetaDonnee { get; set; }
+
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+        //FIN RELATION
+
+
 
 
     }

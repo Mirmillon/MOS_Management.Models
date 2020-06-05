@@ -1,5 +1,7 @@
 ﻿
 
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -27,7 +29,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         TRE_R04-TypeSavoirFaire
         */
         [Display(Name = "Type Savoir Faire")]
-        public string TypeSavoirFaireId { get; set; }
+        public TypeSavoirFaire TypeSavoirFaire { get; set; }
 
         //Date à laquelle, l’organisme donnant l’autorisation d’exercer une qualification 
         //a reconnu cette qualification ou date à laquelle l'attribution a été donnée au professionnel
@@ -41,12 +43,12 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public DateTime? DateAbandon { get; set; }
         //code type Savoir Faire
 
+         public MetaDonnee MetaDonnee { get; set; }
 
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+        //FIN RELATION
 
-        public SavoirFaire()
-        {
-
-        }
-       
     }
 }

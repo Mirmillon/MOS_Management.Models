@@ -13,8 +13,4 @@
     <ProjectReference Include="..\FhirManagementModels\FHIR_Management.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CLassesMos\FromDiplome\" />
-  </ItemGroup>
-
 </Project>

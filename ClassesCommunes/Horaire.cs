@@ -1,6 +1,7 @@
 ﻿
 using MOS_Management.Models.ClassesCommunes;
 using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.ProfessionnelDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -58,6 +59,10 @@ namespace MOS_Management.Models.ClassesCommunes
         {
             Ouvert = true;
         }
+
+        //
+        public string SituationOperationnelleId { get; set; }
+        public SituationOperationnelle SituationOperationnelle { get; set; }
 
 
 

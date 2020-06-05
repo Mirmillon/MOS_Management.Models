@@ -1,7 +1,9 @@
 ﻿using EHR_Management.Models.ProjectAttribute;
+using MOS_Management.Models.AccordDossier;
 using MOS_Management.Models.CLassesMos.FromTexte;
 using MOS_Management.Models.PersonnePriseChargeDossier;
 using MOS_Management.Models.ProfessionnelDossier;
+using MOS_Management.Models.StructureDossier;
 using MOS_Management.Models.TypeDonnées.Complexes;
 using MOS_Management.Models.TypeDonnées.Simple;
 using System;
@@ -112,8 +114,44 @@ namespace MOS_Management.Models.ClassesCommunes
         public string PersonnePriseChargeId { get; set; }
         public PersonnePriseCharge PersonnePriseCharge { get; set; }
 
+        //
+        public string AttributionParticuliéreId { get; set; }
+        public AttributionParticuliére AttributionParticuliére { get; set; }
 
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
 
+        public string NiveauFormationId { get; set; }
+        public NiveauFormation NiveauFormation { get; set; }
+
+        public string InscriptionOrdreId { get; set; }
+        public InscriptionOrdre InscriptionOrdre { get; set; }
+
+        public string SavoirFaireId { get; set; }
+        public SavoirFaire SavoirFaire { get; set; }
+
+        public string SituationEnExerciceId { get; set; }
+        public SituationEnExercice SituationEnExercice { get; set; }
+
+        public string SituationOperationnelleId { get; set; }
+        public SituationOperationnelle SituationOperationnelle { get; set; }
+
+        //AccordDossier
+        public string AutorisationExerciceId { get; set; }
+        public AutorisationExercice AutorisationExercice { get; set; }
+
+        public string ConventionId { get; set; }
+        public Convention Convention { get; set; }
+
+        public string LicenceExploitationId { get; set; }
+        public LicenceExploitation LicenceExploitation { get; set; }
+
+        //Structure
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
+
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
     }

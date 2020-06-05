@@ -1,6 +1,8 @@
 ﻿using MOS_Management.Models.CLassesMos.FromCode;
 using MOS_Management.Models.CLassesMos.FromTexte;
+using MOS_Management.Models.PersonnePriseChargeDossier;
 using MOS_Management.Models.ProfessionnelDossier;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -310,5 +312,15 @@ namespace MOS_Management.Models.ClassesCommunes
 
         public string PersonnePriseChargeId { get; set; }
         public PersonnePriseCharge PersonnePriseCharge { get; set; }
+
+        public string SituationEnExerciceId { get; set; }
+        public SituationEnExercice SituationEnExercice { get; set; }
+
+        //GROUPE STRUCTURE
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
+
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
     }
 }

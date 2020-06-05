@@ -1,4 +1,5 @@
 ﻿using MOS_Management.Models.CLassesMos.FromCode;
+using MOS_Management.Models.StructureDossier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,5 +23,9 @@ namespace MOS_Management.Models.ClassesCommunes
         //
         public string ZoneId { get; set; }
         public Zone Zone { get; set; }
+
+        //
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
     }
 }

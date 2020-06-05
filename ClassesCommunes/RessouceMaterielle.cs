@@ -22,10 +22,12 @@ namespace MOS_Management.Models.ClassesCommunes
         */
         public string Reference { get; set; }
 
-        //FOREIGN KEY
-      
-      
-      
+        //
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
+
+
+
 
     }
 }

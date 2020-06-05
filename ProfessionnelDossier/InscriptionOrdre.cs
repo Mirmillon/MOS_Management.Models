@@ -1,4 +1,6 @@
 ﻿
+using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -23,7 +25,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Type Ordre")]
-        public string TypeOrdreProfessionelId { get; set; }
+        public Ordre Ordre { get; set; }
 
         /*
         Date d’inscription de la personne au tableau de l’ordre.
@@ -46,16 +48,22 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(1)]
         [Display(Name = "Statut inscription")]
-        public string StatutInscriptionId { get; set; }
+        public StatutInscription StatutInscription { get; set; }
 
         /*
         */
         [MaxLength(6)]
         [Display(Name = "Département inscription")]
-        public string CodeDepartementId { get; set; }
+        public DepartementOM DepartementOM { get; set; }
+
+        public MetaDonnee MetaDonnee { get;  set; }
+
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+        //FIN RELATION
 
 
-       
 
     }
 }

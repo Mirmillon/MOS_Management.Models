@@ -2,6 +2,7 @@
 using MOS_Management.Models.CLassesMos.FromTelecommunication;
 using MOS_Management.Models.CLassesMos.FromTexte;
 using MOS_Management.Models.ProfessionnelDossier;
+using MOS_Management.Models.StructureDossier;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -87,6 +88,19 @@ namespace MOS_Management.Models.ClassesCommunes
         //
         public string ProfessionnelId { get; set; }
         public Professionnel Professionnel { get; set; }
+
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+
+        public string SituationEnExerciceId { get; set; }
+        public SituationEnExercice SituationEnExercice { get; set; }
+
+        //GROUPE STRUCTURE
+        public string EntiteJuridiqueId { get; set; }
+        public EntiteJuridique EntiteJuridique { get; set; }
+
+        public string EntiteGeographiqueId { get; set; }
+        public EntiteGeographique EntiteGeographique { get; set; }
 
 
     }

@@ -1,4 +1,5 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -41,7 +42,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(3)]
         [Display(Name = "Conventionnement")]
-        public string SecteurConventionnementId { get; set; }
+        public SecteurConventionnement SecteurConventionnement { get; set; }
         /*
         L’indicateur visite à domicile précise si le professionnel, dans le cadre de cette situation opérationnelle, propose des
         visites à domicile ou pas.
@@ -52,9 +53,19 @@ namespace MOS_Management.Models.ProfessionnelDossier
         public bool? VisiteDomicile { get; set; }
 
         public Horaire Horaire { get; set; }
-        public IEnumerable<TeleCommunication> TeleCommunications { get; set; }
+
+        public List<TeleCommunication> TeleCommunications { get; set; }
+
+        public MetaDonnee MetaDonnee { get; set;  }
+
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+        //FIN RELATION
 
 
-       
+
+
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -32,7 +33,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         //maslenght 6
         [MaxLength(6)]
         [Display(Name = "Fonction")]
-        public string FonctionId { get; set; }
+        public Fonction Fonction { get; set; }
         /*
         Indique le type de fonction du professionnel au sein de la structure d’exercice.
         Nomenclature(s) associée(s) :
@@ -42,7 +43,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Type Fonction")]
-        public string TypeFonctionId { get; set; }
+        public TypeFonction TypeFonction { get; set; }
         /*
         Le mode d'exercice décrit selon quelle modalité une activité est exercée au regard de l'organisation de la rétribution
         du professionnel.
@@ -56,7 +57,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(2)]
         [Display(Name = "Mode Exercice")]
-        public string ModeExerciceId { get; set; }
+        public ModeExercice ModeExercice { get; set; }
         /*
         */
         [DataType(DataType.Date)]
@@ -70,7 +71,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Genre Activité")]
-        public string GenreActiviteId { get; set; }
+        public GenreActivite GenreActivite { get; set; }
         /*
         */
         [DataType(DataType.Date)]
@@ -87,7 +88,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(3)]
         [Display(Name = "Motif Fin Activite")]
-        public string MotifFinActiviteId { get; set; }
+        public MotifFinActivite MotifFinActivite { get; set; }
         /*
         Statut hospitalier dans le cas d’une activité exercée en établissement public de santé, par exemple:
         ** Professeur des universités - praticien hospitalier (PU-PH);
@@ -98,7 +99,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Statut Hospitalier")]
-        public string StatutHospitalierId { get; set; }
+        public StatutHospitalier StatutHospitalier { get; set; }
         /*
         Section du tableau de l’Ordre des pharmaciens, par exemple:
         ** Pharmacien titulaire d’officine;
@@ -109,7 +110,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(2)]
         [Display(Name = "Section")]
-        public string SectionId { get; set; }
+        public SectionTableau SectionTableau { get; set; }
         /*
         Sous-section ou à défaut section du tableau de l’Ordre des pharmaciens.
         Nomenclature(s) associée(s) :
@@ -117,7 +118,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(3)]
         [Display(Name = "Sous Section")]
-        public string SousSectionId { get; set; }
+        public SousSection SousSection { get; set; }
         /*
         Type d’activité libérale, par exemple:
         ** Cabinet;
@@ -128,7 +129,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(12)]
         [Display(Name = "Type Activite Liberale")]
-        public string TypeActiviteLiberaleId { get; set; }
+        public TypeActiviteLiberale TypeActiviteLiberale { get; set; }
         /*
         Statut du professionnel du Service de santé des armées, par exemple:
         ** Praticien certifié;
@@ -140,16 +141,23 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(12)]
         [Display(Name = " Statut du Service de santé des armées")]
-        public string StatutProfessionnelSSAId { get; set; }
+        public StatutProfessionnelSSA StatutProfessionnelSSA { get; set; }
 
 
-        public IEnumerable<TeleCommunication> Telecommunications { get; set; }
-        public IEnumerable<Adresse> Adresses { get; set; }
-        public IEnumerable<BoileLettreMMS> BoiteLettreMMs { get; set; }
+        public List<TeleCommunication> Telecommunications { get; set; }
+        public List<Adresse> Adresses { get; set; }
+        public List<BoileLettreMMS> BoiteLettreMMs { get; set; }
 
-  
+        public MetaDonnee MetaDonnee { get; set; }
 
-       
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+        //FIN RELATION
+
+
+
+
 
     }
 }

@@ -2,6 +2,7 @@
 
 
 using MOS_Management.Models.ClassesCommunes;
+using MOS_Management.Models.CLassesMos.FromCode;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -34,7 +35,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Nature formation")]
-        public string NatureFormationId { get; set; }
+        public NatureFormation NatureFormation { get; set; }
 
         /*
         Niveau de validité dans le cycle de formation.
@@ -43,7 +44,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(3)]
         [Display(Name = "Niveau formation")]
-        public string TypeNiveauFormationId { get; set; }
+        public TypeNiveauFormation TypeNiveauFormation { get; set; }
 
         /*
         Année universitaire, exemple : 2015-2016.
@@ -52,13 +53,20 @@ namespace MOS_Management.Models.ProfessionnelDossier
         */
         [MaxLength(6)]
         [Display(Name = "Année Universitaire")]
-        public string AnneeUniversitaireId { get; set; }
+        public AnneeUniversitaire AnneeUniversitaire { get; set; }
 
         //Date à laquelle le niveau de formation n’est plus actif (non visible hormis dans les données historisées). 
         //Cette date est renseignée par l’ordre à la clôture de l’exercice professionnel.
         [DataType(DataType.Date)]
         [Display(Name = "Fin Niveau formation")]
         public DateTime? DateFin { get; set; }
+
+        public MetaDonnee MetaDonnee { get; set; }
+
+        //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
+        public string ExerciceProfessionnelId { get; set; }
+        public ExerciceProfessionnel ExerciceProfessionnel { get; set; }
+        //FIN RELATION
 
     }
 }
