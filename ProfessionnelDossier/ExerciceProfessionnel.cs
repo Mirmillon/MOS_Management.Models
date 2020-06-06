@@ -126,7 +126,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         //FIN RELATION
 
         //RELATION AUTRE DOSSIER
-        public List<CarteProfessionnel> CarteProfessionnelles { get; set; }
+        public List<CarteProfessionnelle> CarteProfessionnelles { get; set; }
         public List<Certificat> Certificats { get; set; }
 
 

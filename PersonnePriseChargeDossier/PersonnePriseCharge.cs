@@ -18,6 +18,6 @@ namespace MOS_Management.Models.PersonnePriseChargeDossier
 
         public MetaDonnee MetaDonnee { get; set; }
 
-        public List<PersonnePriseEnCharge_Professionnel> Soignant_Soigne { get; set; }
+        public List<PersonnePriseEnCharge_Professionnel> Soignant_Soignes { get; set; }
     }
 }

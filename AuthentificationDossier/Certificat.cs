@@ -122,7 +122,7 @@ namespace MOS_Management.Models.AuthentificationDossier
 
         //RELATION DANS DOSSIER
         public string CarteProfessionnelId { get; set; }
-        public CarteProfessionnel CarteProfessionnel { get; set; }
+        public CarteProfessionnelle CarteProfessionnelle { get; set; }
         //FIN RELATION
 
         //RELATION AUTRE DOSSIER

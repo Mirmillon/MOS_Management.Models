@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace MOS_Management.Models.OrganisationDossier
@@ -7,6 +9,8 @@ namespace MOS_Management.Models.OrganisationDossier
     public class Sectorisation
     {
         //TODO faire la classe
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string OrganisationInterneId { get; set; }
         public OrganisationInterne OrganisationInterne { get; set; }
     }

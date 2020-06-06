@@ -28,7 +28,7 @@ namespace MOS_Management.Models.ProfessionnelDossier
         //RELATION DOSSIER PROFESSIONNEL D'APRES SCHEMA
         public List<ExerciceProfessionnel> ExerciceProfessionnels { get; set; }
 
-        public List<PersonnePriseEnCharge_Professionnel> Soignant_Soigne { get; set; }
+        public List<PersonnePriseEnCharge_Professionnel> Soignant_Soignes { get; set; }
 
         //RELATION AVEC LES AUTRES DOSSIERS
         public List<AutorisationExercice> AutorisationExercices { get; set; }

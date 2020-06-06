@@ -14,11 +14,11 @@ lui-même. Un professionnel exerçant simultanément deux professions a deux car
 
 namespace MOS_Management.Models.AuthentificationDossier
 {
-    public class CarteProfessionnel
+    public class CarteProfessionnelle
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string CarteProfessionnelId { get; set; }
+        public string CarteProfessionnelleId { get; set; }
         /*
         Type de carte de professionnel (CPx) :
         ** Carte de Professionnel de Santé (CPS)
